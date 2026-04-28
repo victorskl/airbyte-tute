@@ -3,6 +3,21 @@
 _observe kubernetes control plane set up by `abctl`_
 
 ```
+docker images | grep -- airbyte
+airbyte/bootloader:2.1.0                                                      ad49de079d08        806MB             0B
+airbyte/connector-sidecar:2.1.0                                               022b0a1d9ff7        827MB             0B
+airbyte/container-orchestrator:2.1.0                                          73b68ef9653d        820MB             0B
+airbyte/cron:2.1.0                                                            a5e785206bb9        844MB             0B
+airbyte/db:1.7.0-17                                                           1f330efb91c0        270MB             0B
+airbyte/manifest-server:7.10.0                                                ee988c8e2ddc        719MB             0B
+airbyte/server:2.1.0                                                          c8e50308021f        865MB             0B
+airbyte/worker:2.1.0                                                          e7875052da1e        829MB             0B
+airbyte/workload-api-server:2.1.0                                             e558ee4dacfe        824MB             0B
+airbyte/workload-init-container:2.1.0                                         74250c7613ed        815MB             0B
+airbyte/workload-launcher:2.1.0                                               1885138c5a73        829MB             0B
+```
+
+```
 docker ps -a | grep abctl-control-plane
 e535c82d68ca   kindest/node:v1.29.8   "/usr/local/bin/entr…"   About an hour ago   Up About an hour   0.0.0.0:8000->80/tcp, 127.0.0.1:56114->6443/tcp   airbyte-abctl-control-plane
 ```

@@ -62,8 +62,10 @@ abctl local credentials --email user@company.example
 
 ```
 - Connections > New Connection 
-- Define Source > Set up a new source > Marketplace > at Search box: "Sample Data (Faker)"
+- Define Source > Set up a new source > Marketplace > at Search box: "Sample Data > click button: Set up source"
 - Define destination > Set up a new destination > Marketplace > at Search box: "Local JSON" > at Destination Path: `/tmp/airbyte_local`
+(or)
+- Define destination > Set up a new destination > Airbyte Connectors > Postgres > [setup connection]
 ```
 
 ### Clean up
@@ -73,7 +75,7 @@ abctl local uninstall --persisted
 ```
 
 ```
-rm -rf ~/.airbyte/abctl
+rm -rf ~/.airbyte
 ```
 
 ```
